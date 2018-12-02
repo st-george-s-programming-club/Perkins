@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Review</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    
+</head>
+
+<body>
+  <style>
+    #delta-container {
+    font-family: monospace;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navigation Bar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index.html">Home</a>
+    
+      <a class="nav-item nav-link" href="login.html">Login</a>
+      
+      <a class="nav-item nav-link" href="register.html">Register</a>
+      <a class="nav-item nav-link" href="submit.html">Submit</a>
+
+    </div>
+  </div>
+
+  </nav>
+
+<p>Listed below is the editable document and the differences</p> 
+<form onsubmit="sendData()" id="send">
+<div class="unit">
+  <h1>Edit</h1>
+  <div id="edit" class="editor">
+    <p>Temp</p>
+  </div>
+</div>
+</form>
+<center><button class="btn btn-primary" type="submit" form="send" value="Submit">Submit</button></center>
+<!-- <div class="unit">
+  <h1>Diff</h1>
+  <div id="diff" class="editor">
+    <p>Temp</p>
+  </div>
+</div>-->
+
+</body>
+<span id="documentid">{{doc.id}}</span>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../view/edit.js"></script>
+
+
+</html>
